@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+     p {
+       font-weight: bold;
+     }
+     span {
+       font-style: italic;
+     }
+    </style>
+    <script>
+    function createDIV() {
+    var obj = document.getElementById("parent");
+    var newDIV = document.createElement("div");
+    newDIV.innerHTML = "제품 구매후 게시판에 인증 시 추첨을 통해 문화상품권 증정!";
+    newDIV.setAttribute("id","myDiv");
+    newDIV.style.backgroundColor = "yellow";
+    newDIV.addEventListener("click",
+               function () {
+                 var p = this.parentElement;
+                 p.removeChild(this);
+               });
+    obj.appendChild(newDIV);
+  }
+    </script>
+  </head>
+  <body id="parent">
+  <div>
+    <p>엔젤 도그에 오신것을 환영합니다 !</p>
+    강아지를 키우는 분들이시라면 필요한 것들만 모아뒀습니다!<br>
+    사이트 오픈기념 3주년을 맞이하여 이용자들을 위한 특별 이벤트를
+    를 진행중이오니 많은 참여 부탁드립니다.
+  </div>
+  <a href="javascript:createDIV()">이벤트 내용 보기</a><p><p>
+  </body>
+</html>
